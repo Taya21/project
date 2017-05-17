@@ -9,11 +9,19 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void Universities_Click(object sender, EventArgs e)
+        {
+            Universities form = new Universities();
+            Hide();
+            form.ShowDialog();
+            Dispose();
         }
     }
 }

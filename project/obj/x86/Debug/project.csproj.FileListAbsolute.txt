@@ -1,0 +1,8 @@
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.Menu.resources
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.csproj.GenerateResource.Cache
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\bin\Debug\project.exe
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\bin\Debug\project.pdb
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.Properties.Resources.resources
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.exe
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.pdb
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.Universities.resources
