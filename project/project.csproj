@@ -54,12 +54,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadExternalFiles.cs" />
+    <Compile Include="Specialties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Specialties.Designer.cs">
+      <DependentUpon>Specialties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Universities.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Universities.Designer.cs">
       <DependentUpon>Universities.cs</DependentUpon>
     </Compile>
+    <Compile Include="UniversityStruct.cs" />
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,9 +76,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Specialties.resx">
+      <DependentUpon>Specialties.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Universities.resx">
       <DependentUpon>Universities.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\ReadExternalFiles.datasource" />
+    <None Include="Properties\DataSources\Universities.datasource" />
+    <None Include="Properties\DataSources\UniversityStruct.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

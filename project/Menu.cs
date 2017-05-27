@@ -23,5 +23,13 @@ namespace project
             form.ShowDialog();
             Dispose();
         }
+
+        private void b_Specialties_Click(object sender, EventArgs e)
+        {
+            Specialties form = new Specialties();
+            Hide();
+            form.ShowDialog();
+            Dispose();
+        }
     }
 }

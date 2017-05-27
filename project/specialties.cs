@@ -9,11 +9,19 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class specialties : Form
+    public partial class Specialties : Form
     {
-        public specialties()
+        public Specialties()
         {
             InitializeComponent();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Menu form = new Menu();
+            Hide();
+            form.ShowDialog();
+            Dispose();
         }
     }
 }

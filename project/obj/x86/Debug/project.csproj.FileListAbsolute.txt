@@ -6,3 +6,5 @@ D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\o
 D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.exe
 D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.pdb
 D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.Universities.resources
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.Specialties.resources
+D:\Taia\Тая\Education\ХНУРЕ\1 курс\c#\курсач\project\project\obj\x86\Debug\project.csprojResolveAssemblyReference.cache
