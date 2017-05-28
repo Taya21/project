@@ -9,9 +9,11 @@ namespace project
     {
         string name;
         string address;
+        string specialty;
         string countDay;
         string countNight;
         string countDist;
+        string payment;
 
         public string Name
         {
@@ -21,6 +23,11 @@ namespace project
         public string Address
         {
             get { return address; }
+        }
+
+        public string Specialty
+        {
+            get { return specialty; }
         }
 
         public string CountDay
@@ -38,13 +45,20 @@ namespace project
             get { return countDist; }
         }
 
-        public UniversityStruct(string Name, string Address, string Day, string Night, string Dist)
+        public string Payment
+        {
+            get { return payment; }
+        }
+
+        public UniversityStruct(string Name, string Address,string Spel, string Day, string Night, string Dist, string Pay)
         {
             name = Name;
             address = Address;
+            specialty = Spel;
             countDay = Day;
             countNight = Night;
             countDist = Dist;
+            payment = Pay;
         }
     }
 }

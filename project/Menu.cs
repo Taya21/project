@@ -11,6 +11,8 @@ namespace project
 {
     public partial class Menu : Form
     {
+        
+
         public Menu()
         {
             InitializeComponent();
@@ -24,12 +26,6 @@ namespace project
             Dispose();
         }
 
-        private void b_Specialties_Click(object sender, EventArgs e)
-        {
-            Specialties form = new Specialties();
-            Hide();
-            form.ShowDialog();
-            Dispose();
-        }
+        
     }
 }

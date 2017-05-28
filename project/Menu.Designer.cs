@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Universities = new System.Windows.Forms.Button();
-            this.b_Specialties = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,17 +64,6 @@
             this.Universities.UseVisualStyleBackColor = true;
             this.Universities.Click += new System.EventHandler(this.Universities_Click);
             // 
-            // b_Specialties
-            // 
-            this.b_Specialties.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b_Specialties.Location = new System.Drawing.Point(289, 202);
-            this.b_Specialties.Name = "b_Specialties";
-            this.b_Specialties.Size = new System.Drawing.Size(153, 55);
-            this.b_Specialties.TabIndex = 3;
-            this.b_Specialties.Text = "Специальности";
-            this.b_Specialties.UseVisualStyleBackColor = true;
-            this.b_Specialties.Click += new System.EventHandler(this.b_Specialties_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,7 +71,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(550, 358);
-            this.Controls.Add(this.b_Specialties);
             this.Controls.Add(this.Universities);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -99,7 +86,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Universities;
-        private System.Windows.Forms.Button b_Specialties;
     }
 }
 
