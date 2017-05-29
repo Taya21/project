@@ -31,7 +31,6 @@
             this.Back = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cB_Un = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tB_Univ = new System.Windows.Forms.TextBox();
             this.tB_Address = new System.Windows.Forms.TextBox();
@@ -52,9 +51,9 @@
             // Back
             // 
             this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Back.Location = new System.Drawing.Point(12, 259);
+            this.Back.Location = new System.Drawing.Point(2, 259);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(130, 54);
+            this.Back.Size = new System.Drawing.Size(112, 54);
             this.Back.TabIndex = 1;
             this.Back.Text = "Главное меню";
             this.Back.UseVisualStyleBackColor = true;
@@ -63,9 +62,9 @@
             // Add
             // 
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Add.Location = new System.Drawing.Point(170, 259);
+            this.Add.Location = new System.Drawing.Point(120, 259);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(126, 54);
+            this.Add.Size = new System.Drawing.Size(117, 54);
             this.Add.TabIndex = 2;
             this.Add.Text = "Добавить\r\n";
             this.Add.UseVisualStyleBackColor = true;
@@ -75,20 +74,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(165, 9);
+            this.label1.Location = new System.Drawing.Point(115, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Добавление\r\n";
-            // 
-            // cB_Un
-            // 
-            this.cB_Un.FormattingEnabled = true;
-            this.cB_Un.Location = new System.Drawing.Point(316, 58);
-            this.cB_Un.Name = "cB_Un";
-            this.cB_Un.Size = new System.Drawing.Size(126, 21);
-            this.cB_Un.TabIndex = 4;
-            this.cB_Un.DropDownClosed += new System.EventHandler(this.cB_Un_DropDownClosed);
             // 
             // label2
             // 
@@ -111,7 +101,7 @@
             // 
             this.tB_Address.Location = new System.Drawing.Point(137, 84);
             this.tB_Address.Name = "tB_Address";
-            this.tB_Address.Size = new System.Drawing.Size(305, 20);
+            this.tB_Address.Size = new System.Drawing.Size(174, 20);
             this.tB_Address.TabIndex = 9;
             // 
             // label4
@@ -128,7 +118,7 @@
             // 
             this.tB_Specialty.Location = new System.Drawing.Point(137, 109);
             this.tB_Specialty.Name = "tB_Specialty";
-            this.tB_Specialty.Size = new System.Drawing.Size(305, 20);
+            this.tB_Specialty.Size = new System.Drawing.Size(174, 20);
             this.tB_Specialty.TabIndex = 13;
             // 
             // label3
@@ -147,6 +137,7 @@
             this.tB_Day.Name = "tB_Day";
             this.tB_Day.Size = new System.Drawing.Size(100, 20);
             this.tB_Day.TabIndex = 16;
+            this.tB_Day.TextChanged += new System.EventHandler(this.tB_Day_TextChanged);
             // 
             // label5
             // 
@@ -212,9 +203,9 @@
             // back_List
             // 
             this.back_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.back_List.Location = new System.Drawing.Point(316, 259);
+            this.back_List.Location = new System.Drawing.Point(243, 259);
             this.back_List.Name = "back_List";
-            this.back_List.Size = new System.Drawing.Size(126, 54);
+            this.back_List.Size = new System.Drawing.Size(115, 54);
             this.back_List.TabIndex = 23;
             this.back_List.Text = "Назад к списку";
             this.back_List.UseVisualStyleBackColor = true;
@@ -224,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 325);
+            this.ClientSize = new System.Drawing.Size(366, 320);
             this.Controls.Add(this.back_List);
             this.Controls.Add(this.tB_Pay);
             this.Controls.Add(this.label8);
@@ -240,13 +231,11 @@
             this.Controls.Add(this.tB_Address);
             this.Controls.Add(this.tB_Univ);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cB_Un);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Back);
             this.Name = "Specialties";
             this.Text = "Добавление специальности";
-            this.Load += new System.EventHandler(this.Specialties_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +245,6 @@
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cB_Un;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tB_Univ;
         private System.Windows.Forms.TextBox tB_Address;

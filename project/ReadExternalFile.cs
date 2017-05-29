@@ -6,15 +6,15 @@ using System.IO;
 
 namespace project
 {
-    class ReadExternalFiles
+    class ReadExternalFile
     {
 
-        public ReadExternalFiles() { }
+        public ReadExternalFile() { }
 
-        public List<UniversityStruct> ReadFile(string pathToFile)
+        public List<UniversityStruct> ReadFile() 
         {
             List<UniversityStruct> returnData = new List<UniversityStruct>();
-            StreamReader reader = new StreamReader (pathToFile+".txt",Encoding.Default);
+            StreamReader reader = new StreamReader ("Universities.txt", Encoding.Default);
 
             string line;
 
@@ -30,35 +30,31 @@ namespace project
             return returnData;
         }
 
-        public List<UniversityStruct> ReadFile()
-        {
-
-            return ReadFile("Universities");
-        }
-
-        public void Write_Data(UniversityStruct WData)
+        public void WriteData(UniversityStruct ExtraData)
         {
             StreamWriter write = new StreamWriter("Universities.txt", true, Encoding.Default);
 
-            write.WriteLine(WData.Name + "|" + WData.Address + "|" + WData.Specialty + "|" + WData.CountDay + "|" + WData.CountNight + "|" + WData.CountDist + "|" + WData.Payment);
+            write.WriteLine(ExtraData.Name + "|" + ExtraData.Address + "|" + ExtraData.Specialty + "|" + ExtraData.CountDay + "|" + ExtraData.CountNight + "|" + ExtraData.CountDist + "|" + ExtraData.Payment);
             write.Close();
         }
 
-        public void DeleteLine(string lineForDelete)
+        public void DeleteLine(string lineForDelete)   // Delete line with chosen university. 
         {
             List<string> readData = new List<string>();
             StreamReader reader = new StreamReader("Universities.txt", Encoding.Default);
 
+            string line;  // ?????
 
-            string line;
             while ((line = reader.ReadLine()) != null)
             {
                 if (line != lineForDelete) { readData.Add(line); }
             }
+
             reader.Close();
 
             StreamWriter write = new StreamWriter("Universities.txt", false, Encoding.Default);
-            foreach (string lin in readData)
+
+            foreach (string lin in readData)   // ?????
             {
                 write.WriteLine(lin);
             }
