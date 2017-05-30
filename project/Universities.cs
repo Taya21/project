@@ -44,7 +44,7 @@ namespace project
             table.Columns.Add("Дневная", typeof(string));
             table.Columns.Add("Вечерняя", typeof(string));
             table.Columns.Add("Заочная", typeof(string));
-            table.Columns.Add("Контракт", typeof(string));
+            table.Columns.Add("Контракт (дневная форма), грн", typeof(string));
 
             
 

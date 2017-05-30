@@ -54,7 +54,7 @@
             // Back
             // 
             this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Back.Location = new System.Drawing.Point(601, 369);
+            this.Back.Location = new System.Drawing.Point(619, 443);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(130, 54);
             this.Back.TabIndex = 0;
@@ -95,7 +95,7 @@
             // Show_Un
             // 
             this.Show_Un.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Show_Un.Location = new System.Drawing.Point(70, 369);
+            this.Show_Un.Location = new System.Drawing.Point(64, 443);
             this.Show_Un.Name = "Show_Un";
             this.Show_Un.Size = new System.Drawing.Size(130, 54);
             this.Show_Un.TabIndex = 0;
@@ -108,7 +108,7 @@
             this.dGV_tableUn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_tableUn.Location = new System.Drawing.Point(13, 131);
             this.dGV_tableUn.Name = "dGV_tableUn";
-            this.dGV_tableUn.Size = new System.Drawing.Size(818, 232);
+            this.dGV_tableUn.Size = new System.Drawing.Size(825, 306);
             this.dGV_tableUn.TabIndex = 5;
             // 
             // cb_specialty
@@ -135,7 +135,7 @@
             // Add_Specialty
             // 
             this.Add_Specialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Add_Specialty.Location = new System.Drawing.Point(247, 369);
+            this.Add_Specialty.Location = new System.Drawing.Point(245, 443);
             this.Add_Specialty.Name = "Add_Specialty";
             this.Add_Specialty.Size = new System.Drawing.Size(130, 54);
             this.Add_Specialty.TabIndex = 8;
@@ -146,7 +146,7 @@
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delete.Location = new System.Drawing.Point(426, 369);
+            this.Delete.Location = new System.Drawing.Point(441, 443);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(130, 54);
             this.Delete.TabIndex = 24;
@@ -182,7 +182,7 @@
             this.менюToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(843, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(850, 24);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -198,14 +198,14 @@
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 435);
+            this.ClientSize = new System.Drawing.Size(850, 509);
             this.Controls.Add(this.chBox_MinPay);
             this.Controls.Add(this.chBox_MinComp);
             this.Controls.Add(this.Delete);
