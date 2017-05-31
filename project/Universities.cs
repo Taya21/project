@@ -15,9 +15,9 @@ namespace project
     public partial class Universities : Form
     {
         DataTable table;
-        List<UniversityStruct> UniversitiesList; // ??????
-        List<UniversityStruct> Showlist; // ??????
-        ReadExternalFile readF;          // ?????
+        List<UniversityStruct> UniversitiesList; // Keep data about all the universities and specialties. 
+        List<UniversityStruct> Showlist; // The list which is shown in dataGridview. Its values are changing.
+        ReadExternalFile readF;          // The variable for getting access to the funcions for work with a file.
         List<string> name_universities;  // List of universities from text file. 
         List<string> name_specialty;     // List of specialties from text file. 
 
@@ -26,8 +26,7 @@ namespace project
             InitializeComponent();  
         }
 
-        [Serializable]
-
+       
         private void Universities_Load(object sender, EventArgs e) // Main table with universities. 
         {
             readF = new ReadExternalFile();
@@ -45,10 +44,8 @@ namespace project
             table.Columns.Add("Вечерняя", typeof(string));
             table.Columns.Add("Заочная", typeof(string));
             table.Columns.Add("Контракт (дневная форма), грн", typeof(string));
-
             
-
-            foreach (UniversityStruct univ in UniversitiesList) // Going ????????
+            foreach (UniversityStruct univ in UniversitiesList) // Going through the university structure and fiil in the table
             {
                 table.Rows.Add(univ.Name, univ.Address, univ.Specialty, univ.CountDay, univ.CountNight, univ.CountDist, univ.Payment);
 
@@ -192,9 +189,9 @@ namespace project
                     dGV_tableUn.AutoResizeColumns();
 
                     MessageBox.Show("Удаление прошло успешно");
-
                 }
             }
+
             catch
             {
                 MessageBox.Show("Нельзя удалить запись, т.к. она не выбрана");
@@ -222,43 +219,101 @@ namespace project
             e.Handled = true;
         }
 
-        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void chBox_MinComp_CheckedChanged(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+            if (cb_specialty.SelectedItem != null && chBox_MinComp.Checked)
             {
-                return;
+                chBox_MinPay.Checked = false;
+                Showlist = UniversitiesList.FindAll(a => a.Specialty == cb_specialty.SelectedItem.ToString());
+                table.Clear();
+
+                SortList_byConcurs(Showlist);
+
+                foreach (UniversityStruct univ in Showlist)
+                {
+                    table.Rows.Add(univ.Name, univ.Address, univ.Specialty, univ.CountDay, univ.CountNight, univ.CountDist, univ.Payment);
+                }
             }
-            XmlSerializer formatter = new XmlSerializer(typeof(List<UniversityStruct>));
-            using (FileStream fs = new FileStream(saveFileDialog1.FileName, FileMode.OpenOrCreate))
+            else if (chBox_MinComp.Checked)
             {
-                formatter.Serialize(fs, table);
+                chBox_MinPay.Checked = false;
+                table.Clear();
+                Showlist = UniversitiesList;
+                SortList_byConcurs(Showlist);
+
+                foreach (UniversityStruct univ in Showlist)
+                {
+                    table.Rows.Add(univ.Name, univ.Address, univ.Specialty, univ.CountDay, univ.CountNight, univ.CountDist, univ.Payment);
+                }
             }
         }
 
-        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SortList_byConcurs(List<UniversityStruct> list)
         {
-            try
+            UniversityStruct prom;
+            double count = 0;
+            do
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
-                    return;
-                XmlSerializer formatter = new XmlSerializer(typeof(List<UniversityStruct>));
-                using (FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.OpenOrCreate))
+                for (int i = 0; i < list.Count - 1; i++)
                 {
-
-                    table = (List<UniversityStruct>)formatter.Deserialize(fs);
-                    dGV_tableUn.Rows.Clear();
-
-                    foreach (UniversityStruct univ in UniversitiesList)
+                    if (list[i + 1].CountDay < list[i].CountDay)
                     {
-
-                        table.Rows.Add(univ.Name, univ.Address, univ.Specialty, univ.CountDay, univ.CountNight, univ.CountDist, univ.Payment);
+                        prom = list[i + 1];
+                        list[i + 1] = list[i];
+                        list[i] = prom;
                     }
                 }
-            }
-            catch (Exception ex)
+                count++;
+            } while (count < list.Count);
+
+        }
+
+        private void chBox_MinPay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_specialty.SelectedItem != null && chBox_MinPay.Checked)
             {
-                MessageBox.Show(ex.Message, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                chBox_MinComp.Checked = false;
+                Showlist = UniversitiesList.FindAll(a => a.Specialty == cb_specialty.SelectedItem.ToString());
+                table.Clear();
+
+                SortList_byPrice(Showlist);
+
+                foreach (UniversityStruct univ in Showlist)
+                {
+                    table.Rows.Add(univ.Name, univ.Address, univ.Specialty, univ.CountDay, univ.CountNight, univ.CountDist, univ.Payment);
+                }
             }
+            else if (chBox_MinPay.Checked)
+            {
+                chBox_MinComp.Checked = false;
+                table.Clear();
+                Showlist = UniversitiesList;
+                SortList_byPrice(Showlist);
+
+                foreach (UniversityStruct univ in Showlist)
+                {
+                    table.Rows.Add(univ.Name, univ.Address, univ.Specialty, univ.CountDay, univ.CountNight, univ.CountDist, univ.Payment);
+                }
+            }
+        }
+
+        private void SortList_byPrice(List<UniversityStruct> list)
+        {
+            UniversityStruct prom;
+            double count = 0;
+            do
+            {
+                for (int i = 0; i < list.Count - 1; i++)
+                {
+                    if (list[i + 1].Payment < list[i].Payment)
+                    {
+                        prom = list[i + 1];
+                        list[i + 1] = list[i];
+                        list[i] = prom;
+                    }
+                }
+                count++;
+            } while (count < list.Count);
         }
     }
 }

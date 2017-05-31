@@ -10,10 +10,10 @@ namespace project
         string name;
         string address;
         string specialty;
-        string countDay;
-        string countNight;
-        string countDist;
-        string payment;
+        double countDay;
+        double countNight;
+        double countDist;
+        double payment;
 
         public string Name
         {
@@ -30,22 +30,22 @@ namespace project
             get { return specialty; }
         }
 
-        public string CountDay
+        public double CountDay
         {
             get { return countDay; }
         }
 
-        public string CountNight
+        public double CountNight
         {
             get { return countNight; }
         }
 
-        public string CountDist
+        public double CountDist
         {
             get { return countDist; }
         }
 
-        public string Payment
+        public double Payment
         {
             get { return payment; }
         }
@@ -55,10 +55,10 @@ namespace project
             name = Name;
             address = Address;
             specialty = Spel;
-            countDay = Day;
-            countNight = Night;
-            countDist = Dist;
-            payment = Pay;
+            countDay = Convert.ToDouble(Day);
+            countNight = Convert.ToDouble(Night);
+            countDist = Convert.ToDouble(Dist);
+            payment = Convert.ToDouble(Pay);
         }
     }
 }

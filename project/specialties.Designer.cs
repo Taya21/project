@@ -137,7 +137,6 @@
             this.tB_Day.Name = "tB_Day";
             this.tB_Day.Size = new System.Drawing.Size(100, 20);
             this.tB_Day.TabIndex = 16;
-            this.tB_Day.TextChanged += new System.EventHandler(this.tB_Day_TextChanged);
             // 
             // label5
             // 
@@ -235,7 +234,7 @@
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Back);
             this.Name = "Specialties";
-            this.Text = "Добавление специальности";
+            this.Text = "Добавление университета ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

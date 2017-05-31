@@ -43,7 +43,7 @@ namespace project
             List<string> readData = new List<string>();
             StreamReader reader = new StreamReader("Universities.txt", Encoding.Default);
 
-            string line;  // ?????
+            string line;  // A variable for a temporary storage
 
             while ((line = reader.ReadLine()) != null)
             {
@@ -54,7 +54,7 @@ namespace project
 
             StreamWriter write = new StreamWriter("Universities.txt", false, Encoding.Default);
 
-            foreach (string lin in readData)   // ?????
+            foreach (string lin in readData)   // Rewrite data if we delete a university
             {
                 write.WriteLine(lin);
             }
